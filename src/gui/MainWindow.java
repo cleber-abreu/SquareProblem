@@ -20,7 +20,7 @@ public class MainWindow {
 	public static void main(String[] args) {
 		
 		JFrame frmMain = new JFrame("Problema dos quadrados");
-		JTextField txtSize = new JTextField("8");
+		JTextField txtSize = new JTextField("3");
 		JButton btnStart = new JButton("Iniciar");
 		JPanel panel = new JPanel();
 		txtSize.setPreferredSize(new Dimension(48, 26));
@@ -34,7 +34,7 @@ public class MainWindow {
 			}
 		});
 		
-		panel.add(new JLabel("Tamanho do tabuleiro (N x N);  N="));
+		panel.add(new JLabel("Tamanho do tabuleiro (2^n x 2^n);  n="));
 		panel.add(txtSize);
 		panel.add(btnStart);
 		
