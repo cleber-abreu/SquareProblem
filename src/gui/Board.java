@@ -24,6 +24,7 @@ public class Board extends JFrame {
 		JPanel pnlBoard = new JPanel();
 		GridBagConstraints grid = new GridBagConstraints();
 		Border border = new MatteBorder(1, 1, 1, 1, Color.WHITE);
+		Field.setDim(512/size);
 		Field[][] fields = new Field[size][size];
 		
 		pnlBoard.setLayout(new GridBagLayout());
