@@ -13,6 +13,7 @@ import javax.swing.border.MatteBorder;
 
 import global.Piece;
 import global.SquareProblem;
+import model.Direction;
 
 @SuppressWarnings("serial")
 public class Board extends JFrame {
@@ -49,19 +50,19 @@ public class Board extends JFrame {
 		
 		for (Piece piece : pieces) {
 			
-			if (piece.getPos() == 0) {
+			if (piece.getDir() == Direction.NORTHWEST) {
 				for (int i = 0; i < borderPieces.length; i++) {
 					borderPieces[0] = new MatteBorder(1, 1, 0, 0, Color.WHITE);
 					borderPieces[1] = new MatteBorder(1, 0, 1, 1, Color.WHITE);
 					borderPieces[2] = new MatteBorder(0, 1, 1, 1, Color.WHITE);
 				}
 			}
-			else if (piece.getPos() == 1) {
+			else if (piece.getDir() == Direction.SOUTHWEST) {
 				borderPieces[0] = new MatteBorder(1, 0, 0, 1, Color.WHITE);
 				borderPieces[1] = new MatteBorder(1, 1, 1, 0, Color.WHITE);
 				borderPieces[2] = new MatteBorder(0, 1, 1, 1, Color.WHITE);
 			}
-			else if (piece.getPos() == 2) {
+			else if (piece.getDir() == Direction.NORTHEAST) {
 				borderPieces[0] = new MatteBorder(0, 1, 1, 0, Color.WHITE);
 				borderPieces[1] = new MatteBorder(1, 1, 0, 1, Color.WHITE);
 				borderPieces[2] = new MatteBorder(1, 0, 1, 1, Color.WHITE);

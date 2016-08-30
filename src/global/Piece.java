@@ -1,17 +1,19 @@
 package global;
 
+import model.Direction;
+
 public class Piece {
 
 	private Field[] fields;
-	private int pos;
-
-	public Piece(Field[] fields, int position) {
+	private Direction dir;
+	
+	public Piece(Field[] fields, Direction dir) {
 		this.fields = fields;
-		pos = position;
+		this.dir = dir;
 	}
 	
-	public int getPos() {
-		return pos;
+	public Direction getDir() {
+		return dir;
 	}
 	
 	public Field getField(int i) {

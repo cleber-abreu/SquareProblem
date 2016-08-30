@@ -8,11 +8,6 @@ import javax.swing.JPanel;
 public class Field  extends JPanel {
 	
 	private static Dimension dim;
-	
-	public Field() {
-		// TODO Auto-generated constructor stub
-		System.out.println(dim.getSize().getHeight());
-	}
 
 	@Override
 	public Dimension getPreferredSize() {

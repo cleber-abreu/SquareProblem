@@ -2,6 +2,8 @@ package global;
 
 import java.util.ArrayList;
 
+import model.Direction;
+
 public class SquareProblem {
 	
 	private Field[][] fields;
@@ -33,7 +35,7 @@ public class SquareProblem {
 			fieldsTmp[1] = fields[i][i+1];
 			fieldsTmp[2] = fields[i+1][i];
 			
-			pieces.add(new Piece(fieldsTmp, 0));
+			pieces.add(new Piece(fieldsTmp, Direction.NORTHWEST));
 		}
 		
 		for (int row = 0, col=size-1; row < size/2-1; row++, col--) {
@@ -46,7 +48,7 @@ public class SquareProblem {
 			fieldsTmp[1] = fields[row][col-1];
 			fieldsTmp[2] = fields[row+1][col];
 			
-			pieces.add(new Piece(fieldsTmp, 1));
+			pieces.add(new Piece(fieldsTmp, Direction.SOUTHWEST));
 		}
 		
 		for (int row = size-1, col=0; col < size/2-1; row--, col++) {
@@ -59,7 +61,7 @@ public class SquareProblem {
 			fieldsTmp[1] = fields[row-1][col];
 			fieldsTmp[2] = fields[row][col+1];
 			
-			pieces.add(new Piece(fieldsTmp, 2));
+			pieces.add(new Piece(fieldsTmp, Direction.NORTHEAST));
 		}
 		
 		
