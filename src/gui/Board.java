@@ -11,9 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.MatteBorder;
 
-import global.Piece;
 import global.SquareProblem;
 import model.Direction;
+import model.Piece;
 
 @SuppressWarnings("serial")
 public class Board extends JFrame {

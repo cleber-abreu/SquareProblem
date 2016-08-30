@@ -3,6 +3,8 @@ package global;
 import java.util.ArrayList;
 
 import model.Direction;
+import model.Field;
+import model.Piece;
 
 public class SquareProblem {
 	

@@ -1,6 +1,4 @@
-package global;
-
-import model.Direction;
+package model;
 
 public class Piece {
 
