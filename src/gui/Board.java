@@ -33,7 +33,7 @@ public class Board extends JFrame {
 		pnlBoard.setBorder(new MatteBorder(4, 4, 4, 4, Color.DARK_GRAY));
 		
 		SquareProblem problem = new SquareProblem(size);
-		problem.start(size);
+		problem.start();
 		
 		for (int row = 0; row < fields.length; row++) {
 			for (int col = 0; col < fields.length; col++) {
@@ -57,20 +57,27 @@ public class Board extends JFrame {
 					borderPieces[2] = new MatteBorder(0, 1, 1, 1, Color.WHITE);
 				}
 			}
-			else if (piece.getDir() == Direction.SOUTHWEST) {
+			else if (piece.getDir() == Direction.NORTHEAST) {
 				borderPieces[0] = new MatteBorder(1, 0, 0, 1, Color.WHITE);
 				borderPieces[1] = new MatteBorder(1, 1, 1, 0, Color.WHITE);
 				borderPieces[2] = new MatteBorder(0, 1, 1, 1, Color.WHITE);
 			}
-			else if (piece.getDir() == Direction.NORTHEAST) {
+			else if (piece.getDir() == Direction.SOUTHWEST) {
 				borderPieces[0] = new MatteBorder(0, 1, 1, 0, Color.WHITE);
 				borderPieces[1] = new MatteBorder(1, 1, 0, 1, Color.WHITE);
 				borderPieces[2] = new MatteBorder(1, 0, 1, 1, Color.WHITE);
+			}
+			else if (piece.getDir() == Direction.SOUTHEAST) {
+				borderPieces[0] = new MatteBorder(0, 0, 1, 1, Color.WHITE);
+				borderPieces[1] = new MatteBorder(1, 1, 0, 1, Color.WHITE);
+				borderPieces[2] = new MatteBorder(1, 1, 1, 0, Color.WHITE);
 			}
 			
 			for (int i = 0; i < borderPieces.length; i++) {
 				fields[piece.getField(i).getRow()][piece.getField(i).getCol()].setBackground(Color.RED);
 				fields[piece.getField(i).getRow()][piece.getField(i).getCol()].setBorder(borderPieces[i]);
+				fields[piece.getField(i).getRow()][piece.getField(i).getCol()].revalidate();
+				fields[piece.getField(i).getRow()][piece.getField(i).getCol()].repaint();;
 			}
 		}
 		

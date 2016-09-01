@@ -41,5 +41,11 @@ public class Field {
 	public void setFill(int fill) {
 		this.fill = fill;
 	}
+
+	public boolean notFilled() {
+		if (fill == 0)
+			return true;
+		return false;
+	}
 	
 }
