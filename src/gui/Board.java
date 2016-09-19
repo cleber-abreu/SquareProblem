@@ -82,6 +82,7 @@ public class Board extends JFrame {
 		}
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setTitle("Tabuleiro: "+size+" x "+size);
 		setLayout(new BorderLayout());
 		//setBounds(100, 100, 450, 300);
 //		JScrollPane scrollBar = new JScrollPane(pnlBoard, 
